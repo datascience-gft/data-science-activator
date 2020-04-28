@@ -1,0 +1,10 @@
+submissions:
+    submission1:
+        submission_name: load_files_from_gcs_to_bq
+        metadata_file: data-science-activator-landing-data-bucket-mssb-sandbox/meta/load.yaml
+        data_file: data-science-activator-landing-data-bucket-mssb-sandbox/billable_days.csv
+        action: load
+    submission2:
+        submission_name: create_bq_views
+        metadata_file: data-science-activator-landing-data-bucket-mssb-sandbox/meta/view.yaml
+        action: view

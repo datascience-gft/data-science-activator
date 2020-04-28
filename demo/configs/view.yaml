@@ -1,0 +1,67 @@
+views:
+  view1:
+    view_name: view_billabe_days
+    project_id_des: data-science-activator
+    dataset_des: dataset_for_holding_views
+    cols:
+      col1:
+        name_des: Country
+        name_src: country
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: billable_days_table
+        condition:
+      col2:
+        name_des: January_2019
+        name_src: jan_01_2019
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: billable_days_table
+        condition:
+      col3:
+        name_des: January_2020
+        name_src: jan_01_2020
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: billable_days_table
+        condition:
+  view2:
+    view_name: view_actual_revenue
+    project_id_des: data-science-activator
+    dataset_des: dataset_for_holding_views
+    cols:
+      col1:
+        name_des: Actuals_Commitment
+        name_src: Actuals_and_Commitment
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: revenue_actual
+        condition:
+      col2:
+        name_des: p_one
+        name_src: p_1
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: revenue_actual
+        condition:
+      col3:
+        name_des: p_two
+        name_src: p_2
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: revenue_actual
+        condition:
+      col4:
+        name_des: p_three
+        name_src: p_3
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: revenue_actual
+        condition:
+      col5:
+        name_des: Bluesky
+        name_src: bluesky
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: revenue_actual
+        condition:

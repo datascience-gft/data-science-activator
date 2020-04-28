@@ -1,0 +1,77 @@
+key_file: ../../../../data-science-activator-key.json
+project_id: data-science-activator
+mode: big_query
+sources:
+  source1:
+    bucket_id: data-science-activator-landing-data-bucket-mssb-sandbox
+    file_path: revenue_actual.csv
+    file_type: csv
+    skip_leading_rows: 1
+destination:
+  schema:
+    field1:
+      name: date
+      type: STRING
+      mode: NULLABLE
+    field2:
+      name: Actuals_and_Commitment
+      type: FLOAT
+      mode: NULLABLE
+    field3:
+      name: p_1
+      type: FLOAT
+      mode: NULLABLE
+    field4:
+      name: p_2
+      type: FLOAT
+      mode: NULLABLE
+    field5:
+      name: p_3
+      type: FLOAT
+      mode: NULLABLE
+    field6:
+      name: bluesky
+      type: FLOAT
+      mode: NULLABLE
+    field7:
+      name: mcom
+      type: FLOAT
+      mode: NULLABLE
+    field8:
+      name: on_call
+      type: FLOAT
+      mode: NULLABLE
+    field9:
+      name: expenses
+      type: FLOAT
+      mode: NULLABLE
+    field10:
+      name: AnB
+      type: FLOAT
+      mode: NULLABLE
+    field11:
+      name: Tech_Funds
+      type: FLOAT
+      mode: NULLABLE
+    field12:
+      name: month_end_title
+      type: STRING
+      mode: NULLABLE
+    field113:
+      name: client_unit
+      type: STRING
+      mode: NULLABLE
+    field14:
+      name: legal_entity
+      type: STRING
+      mode: NULLABLE
+    field15:
+      name: month_end_helper
+      type: STRING
+      mode: NULLABLE
+    field16:
+      name: adjustments
+      type: FLOAT
+      mode: NULLABLE
+  dataset: market_dataset
+  table: revenue_actual

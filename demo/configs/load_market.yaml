@@ -1,0 +1,45 @@
+key_file: ../../../../data-science-activator-key.json
+project_id: data-science-activator
+mode: big_query
+sources:
+  source1:
+    bucket_id: data-science-activator-landing-data-bucket-mssb-sandbox
+    file_path: prepared_data/market_data.csv
+    file_type: csv
+    skip_leading_rows: 1
+destination:
+  schema:
+    field1:
+      name: Date
+      type: STRING
+      mode: required
+    field2:
+      name: High
+      type: FLOAT
+      mode: required
+    field3:
+      name: Low
+      type: FLOAT
+      mode: required
+    field4:
+      name: Open
+      type: FLOAT
+      mode: required
+    field5:
+      name: Close
+      type: FLOAT
+      mode: required
+    field6:
+      name: Volume
+      type: FLOAT
+      mode: required
+    field7:
+      name: Adj_close
+      type: FLOAT
+      mode: required
+    field8:
+      name: ticker
+      type: STRING
+      mode: required
+  dataset: market_dataset
+  table: market_data

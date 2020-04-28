@@ -1,0 +1,7 @@
+dlp:
+    info_types:
+        - EMAIL_ADDRESS
+        - FIRST_NAME
+        - LAST_NAME
+project_name: data-science-activator
+key_file: ../../../../data-science-activator-key.json

@@ -1,0 +1,141 @@
+key_file: ../../../../data-science-activator-key.json
+project_id: data-science-activator
+mode: big_query
+sources:
+  source1:
+    bucket_id: data-science-activator-landing-data-bucket-mssb-sandbox
+    file_path: billable_days.csv
+    file_type: csv
+    skip_leading_rows: 1
+destination:
+  schema:
+    field1:
+      name: country
+      type: STRING
+      mode: NULLABLE
+    field2:
+      name: jan_01_2019
+      type: FLOAT
+      mode: nullable
+    field3:
+      name: feb_01_2019
+      type: FLOAT
+      mode: nullable
+    field4:
+      name: mar_01_2019
+      type: FLOAT
+      mode: nullable
+    field5:
+      name: apr_01_2019
+      type: FLOAT
+      mode: nullable
+    field6:
+      name: may_01_2019
+      type: FLOAT
+      mode: nullable
+    field7:
+      name: jun_01_2019
+      type: FLOAT
+      mode: nullable
+    field8:
+      name: jul_01_2019
+      type: FLOAT
+      mode: nullable
+    field9:
+      name: aug_01_2019
+      type: FLOAT
+      mode: NULLABLE
+    field10:
+      name: sep_01_2019
+      type: FLOAT
+      mode: NULLABLE
+    field11:
+      name: oct_01_2019
+      type: FLOAT
+      mode: nullable
+    field12:
+      name: nov_01_2019
+      type: FLOAT
+      mode: nullable
+    field13:
+      name: total
+      type: FLOAT
+      mode: nullable
+    field14:
+      name: dec_01_2019
+      type: FLOAT
+      mode: nullable
+    field15:
+      name: month_end
+      type: STRING
+      mode: nullable
+    field16:
+      name: client_unit
+      type: STRING
+      mode: nullable
+    field17:
+      name: legal_entity
+      type: STRING
+      mode: nullable
+    field18:
+      name: month_end_helper
+      type: STRING
+      mode: NULLABLE
+    field19:
+      name: adjustments
+      type: FLOAT
+      mode: NULLABLE
+    field20:
+      name: jan_01_2020
+      type: FLOAT
+      mode: nullable
+    field21:
+      name: feb_01_2020
+      type: FLOAT
+      mode: nullable
+    field22:
+      name: mar_01_2020
+      type: FLOAT
+      mode: nullable
+    field23:
+      name: apr_01_2020
+      type: FLOAT
+      mode: nullable
+    field24:
+      name: may_01_2020
+      type: FLOAT
+      mode: nullable
+    field25:
+      name: jun_01_2020
+      type: FLOAT
+      mode: nullable
+    field26:
+      name: jul_01_2020
+      type: FLOAT
+      mode: nullable
+    field27:
+      name: aug_01_2020
+      type: FLOAT
+      mode: NULLABLE
+    field28:
+      name: sep_01_2020
+      type: FLOAT
+      mode: NULLABLE
+    field29:
+      name: oct_01_2020
+      type: FLOAT
+      mode: nullable
+    field30:
+      name: nov_01_2020
+      type: FLOAT
+      mode: nullable
+    field31:
+      name: dec_01_2020
+      type: FLOAT
+      mode: nullable
+    field32:
+      name: dec_01_2018
+      type: FLOAT
+      mode: nullable
+  dataset: market_dataset
+  table: billable_days_table
