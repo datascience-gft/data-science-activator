@@ -1,0 +1,33 @@
+key_file: /Users/smro/code/data-science-activator/gcpip/credentials.json
+project_id: data-sc-activator
+mode: big_query
+sources:
+  source1:
+    bucket_id: data-sc-activation-test-bucket
+    file_path: resources/upload_example1.csv
+    file_type: csv
+    skip_leading_rows: 1
+destination:
+  schema:
+    field1:
+      name: name
+      type: STRING
+      mode: required
+    field2:
+      name: birth_date
+      type: STRING
+      mode: nullable
+    field3:
+      name: register_date
+      type: STRING
+      mode: nullable
+    field4:
+      name: credit_card
+      type: STRING
+      mode: nullable
+    field5:
+      name: password
+      type: STRING
+      mode: required
+  dataset: test_dataset
+  table: test_table

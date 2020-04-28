@@ -1,0 +1,50 @@
+[
+    {
+        "description": "DESCRIPTION",
+        "name": "Date",
+        "type": "String",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "High",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "Low",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "Open",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "Close",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "Volume",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "Adj Close",
+        "type": "FLOAT64",
+        "mode": "Required"
+    },
+    {
+        "description": "DESCRIPTION",
+        "name": "ticker",
+        "type": "String",
+        "mode": "Required"
+    }
+]

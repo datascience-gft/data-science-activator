@@ -1,0 +1,14 @@
+submissions:
+    submission1:
+        submission_name: test_sub2
+        metadata_file: bucket1/meta/load1.yaml
+        data_file: bucket1/data/data1.csv
+        action: load
+    submission2:
+        submission_name: test_sub2
+        metadata_file: bucket1/meta/view.yaml
+        action: view
+    submission3:
+        submission_name: test_sub3
+        metadata_file: bucket1/meta/fe.yaml
+        action: feature_engineering

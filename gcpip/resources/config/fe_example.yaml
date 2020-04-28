@@ -1,0 +1,40 @@
+project_id:
+key_file:
+source_dataset:
+source_table:
+destination_table:
+destination_dataset:
+staging_bucket:
+engineered_features:
+    engineered_feature1:
+        name: moving_average
+        target_columns:
+            - High
+            - Low
+            - Open
+            - Volume
+        parameters:
+            parameter1:
+              name: time_intervals
+              value:
+                - 5
+                - 20
+                - 60
+            parameter2:
+              name: group_column
+              value:
+                - ticker
+            parameter3:
+              name: sort_column
+              value:
+                - Date
+    engineered_feature2:
+        name: mid_price
+        target_columns:
+            - High
+            - Low
+    engineered_feature3:
+        name: spread
+        target_columns:
+            - High
+            - Low

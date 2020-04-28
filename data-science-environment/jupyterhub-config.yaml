@@ -1,0 +1,15 @@
+proxy:
+  secretToken: "7f21fbbf6475f8e92097949aaf2b32cfae21a9ebdd8116a3e772e0422687a3d5"
+
+
+auth:
+  type: dummy
+  dummy:
+    password: 'juppass'
+  whitelist:
+    users:
+      - user1
+      - user2
+
+# Instruction to set up user authentication for jupyterhub is available in:
+# https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/authentication.html

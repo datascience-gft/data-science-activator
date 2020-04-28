@@ -1,0 +1,45 @@
+key_file: /Users/xuzo/GCP-keys/data-science-activator-key.json
+project_id: data-science-activator
+mode: big_query
+sources:
+  source1:
+    bucket_id: data-science-activator-test-bucket
+    file_path: data/market_data.csv
+    file_type: csv
+    skip_leading_rows: 1
+destination:
+  schema:
+    field1:
+      name: Date
+      type: STRING
+      mode: required
+    field2:
+      name: High
+      type: FLOAT
+      mode: nullable
+    field3:
+      name: Low
+      type: FLOAT
+      mode: nullable
+    field4:
+      name: Open
+      type: FLOAT
+      mode: nullable
+    field5:
+      name: Close
+      type: FLOAT
+      mode: required
+    field6:
+      name: Volume
+      type: FLOAT
+      mode: nullable
+    field7:
+      name: Adj_Close
+      type: FLOAT
+      mode: nullable
+    field8:
+      name: ticker
+      type: STRING
+      mode: required
+  dataset: test_market_dataset
+  table: test_market_data

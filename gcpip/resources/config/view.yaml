@@ -1,0 +1,53 @@
+views:
+  view1:
+    view_name: test_BQ_view1  # name of the view
+    project_id_des: data-science-activator
+    dataset_des: dataset_for_holding_views
+    cols:
+      col1:
+        name_des: Date
+        name_src: Date
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
+      col2:
+        name_des: Open
+        name_src: Open
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
+      col3:
+        name_des: Close
+        name_src: Close
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
+  view2:
+    view_name: test_BQ_view2  # name of the view
+    project_id_des: data-science-activator
+    dataset_des: dataset_for_holding_views
+    cols:
+      col1:
+        name_des: Date
+        name_src: Date
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
+      col2:
+        name_des: High
+        name_src: High
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
+      col3:
+        name_des: Low
+        name_src: Low
+        project_id_src: data-science-activator
+        dataset_src: market_dataset
+        table_src: market
+        condition:
