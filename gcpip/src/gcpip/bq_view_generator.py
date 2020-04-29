@@ -27,9 +27,11 @@ def get_sql_query_for_views(bq_config_obj):
             source_dataset = col_schema['dataset_src']
             source_table = col_schema['table_src']
             if i > 0:
-                sql_columns = sql_columns + ', ' + view_schema['cols'][col]['name_src']
+                sql_columns = sql_columns + ', ' + view_schema['cols'][col]['name_src'] + \
+                              " as " + view_schema['cols'][col]['name_des']
             else:
-                sql_columns = sql_columns + view_schema['cols'][col]['name_src']
+                sql_columns = sql_columns + view_schema['cols'][col]['name_src'] + \
+                              " as " + view_schema['cols'][col]['name_des']
             sql_source_table = '`{}.{}.{}`'.format(project, source_dataset, source_table)
         sql_queries[view] = 'SELECT ' + sql_columns + ' FROM ' + sql_source_table
     return sql_queries
