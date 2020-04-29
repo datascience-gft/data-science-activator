@@ -311,7 +311,7 @@ def check_config_file_exists(client, bucket_name, config_blob_name):
     This function checks if the specified BigQuery view configure file exists in the specified bucket.
     Args:
         client: cloud storage client object
-        bucket_name (str): name of the bucket containing the view configuration file
+        bucket_name (str): name of the bucket containing the configuration files
         config_blob_name (str): name of the blob, which corresponds to the unique path of the object in the bucket.
 
     Returns:
@@ -335,7 +335,7 @@ def get_submission_config_obj(client, bucket_name, source_blob_name):
     Returns:
         submission_config_obj: submission configuration object
     """
-    temp_local_file = "sub_config.yaml"  # temporary local file for storing the submission yaml file
+    temp_local_file = os.path.basename(source_blob_name)  # temporary local file for storing the submission yaml file
 
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(source_blob_name)
@@ -370,17 +370,18 @@ def get_config_obj_from_submission(action, client, bucket_name, source_blob_name
     for submission in submission_list:
         if submission_config_obj.get_submissions()[submission]["action"] == action:
             meta_file_path = submission_config_obj.get_submissions()[submission]["metadata_file"]
+            meta_file_bucket_name = meta_file_path.split('/')[0]
             meta_file_name = os.path.basename(meta_file_path)
 
-    source_blob_name = 'meta/' + meta_file_name
-    temp_local_file = "{}.yaml".format(action)  # temporary local file for storing bq view yaml file
-    bucket = client.bucket(bucket_name)
+    config_blob_name = meta_file_path.replace(meta_file_bucket_name + "/", "")
+    temp_local_file = meta_file_name  # temporary local file for storing config yaml file
+    bucket = client.bucket(meta_file_bucket_name)
 
     config_blob_exists = check_config_file_exists(client=client,
-                                                  bucket_name=bucket_name,
-                                                  config_blob_name=source_blob_name)
+                                                  bucket_name=meta_file_bucket_name,
+                                                  config_blob_name=config_blob_name)
     if config_blob_exists:
-        blob = bucket.blob(source_blob_name)
+        blob = bucket.blob(config_blob_name)
         blob.download_to_filename(temp_local_file)
         if action == "load":
             config_obj = LoadConfig(temp_local_file)
