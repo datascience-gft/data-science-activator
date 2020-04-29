@@ -1,6 +1,7 @@
 #!/bin/sh
 sudo apt-get -y update
 sudo apt-get -y upgrade
+sudo apt -y install git
 
 if ! type jupyter  > /dev/null; then
   echo "" >> /root/.bashrc
