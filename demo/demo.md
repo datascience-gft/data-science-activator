@@ -1,20 +1,27 @@
 # Part 1 - Data landing zone
 In the first section, the data-landing-zone infrastructure was built using Terraform code.
 ## Step 1 – Installation of Terraform
-See [README.md][https://git.gft.com/napt/data-science-activator/blob/master/README.md]
+See [README.md](../README.md)
 
 
 ## Step 2 – Setup GCP project
 
-See [README.md][https://git.gft.com/napt/data-science-activator/blob/master/README.md]
+See [README.md](../README.md)
 
 ## Step 3 – Initialize your project
 
 ### 3.1 Clone the data-science-activator
 
+Run the following script to clone the `data-science-activator` repository from GitHub. The GitHub username and 
+password
 ```shell script
-git clone https://git.gft.com/napt/data-science-activator/tree/master
+git clone https://github.com/nimapak/data-science-activator.git
 ```
+Once the GCP environment is created in the following steps, the same code can be run on a virtual machine (VM)
+to clone the code to the VM. See below
+
+![clone repo to vm](screenshots/git_clone_to_vm.png "clone repo to VM")
+
 ### 3.2 Install shared-components first within the package
 
 - Change directory to folder `shared-components/`

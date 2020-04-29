@@ -17,3 +17,9 @@ htmlcov/*
 junit.xml
 coverage.xml
 .pytest_cache/
+
+# temp files
+temp_dir/
+
+#Jupyter
+.ipynb_checkpoints/
